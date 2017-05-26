@@ -1,0 +1,29 @@
+<div>
+	<div class="container" ng-controller="FasecoldaCtrl">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Buscar por codigo fasecolda</h3>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-10">
+					<input type="text" ng-keyup="getAuto()" ng-model="inputData.option" class="form-control" placeholder="Marca / Codigo fasecolda">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2">
+					<input class="form-control" type="number" ng-model="inputData.limit" placeholder="Limite">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div  class="col-md-12" ng-repeat="auto in autos">
+				<blockquote>
+					<h3>{{ auto.marca_vehiculo + " " + auto.referencia_vehiculo}}</h3>
+					<p>Codigo Fasecolda : {{ auto.cod_fasecolda }}</p>
+					<p>Cilindrada : {{ auto.cilindrada }}</p>
+					<p>pasajeros : {{auto.capacidad_pasajeros}}</p>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</div>
