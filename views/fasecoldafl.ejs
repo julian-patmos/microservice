@@ -1,5 +1,11 @@
-<form action="/fasecolda/uploadcsv" enctype="multipart/form-data" method="post">
-	<input type="text" name="title"><br>
-	<input type="file" name="filefase" multiple="false" ><br>
-	<input type="submit" value="Upload">
-</form>
+<div class="container">
+	<div class="row">
+		<h3>Ingrese el archivo csv de codigos fasecolda</h3>
+		<form action="/fasecolda/uploadcsv" enctype="multipart/form-data" method="post">
+			<div class="col-sm-8">
+				<input type="file" class="form-control" name="filefase" multiple="false" ><br>
+			</div>
+			<button type="submit" class="btn btn-primary">Subir Archivo</button>
+		</form>	
+	</div>
+</div>

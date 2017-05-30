@@ -30,7 +30,7 @@ module.exports = {
 							"cod_fasecolda": esteAuto.Codigo,
 							"marca_vehiculo": esteAuto.Marca,
 							"clase_vehiculo": esteAuto.Clase,
-							"referencia_vehiculo": esteAuto.Referencia1 + " " + esteAuto.Referencia2 + " " + esteAuto.Referencia3,
+							"referencia_vehiculo": esteAuto.Marca + " " + esteAuto.Referencia1 + " " + esteAuto.Referencia2 + " " + esteAuto.Referencia3,
 							"peso_vehiculo": esteAuto.Peso,
 							"servicio_vehiculo": esteAuto.IdServicio,
 							"bcpp_vehiculo": esteAuto.Bcpp,
@@ -69,7 +69,6 @@ module.exports = {
 		Fasecolda.find({
 			or : [
 			    { cod_fasecolda: {'like' : "%"+objRequest.option+"%"} },
-			    { marca_vehiculo: {'like' : "%"+objRequest.option+"%"} },
 			    { referencia_vehiculo: {'like' : "%"+objRequest.option+"%"} }
 			],
 			limit : objRequest.limit
