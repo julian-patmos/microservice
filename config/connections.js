@@ -58,10 +58,10 @@ module.exports.connections = {
   ***************************************************************************/
   mongoMicroserviceDB: {
     adapter: 'sails-mongo',
-    host: 'softseguros-mongo-shard-00-02-iuvli.mongodb.net',
+    host: '40.84.151.80',
     port: 27017,
-    user: 'root', //optional
-    password: 'rwiwu3822cckDEWw', //optional
+    user: 'facecolda', //optional
+    password: 'colombia1224', //optional
     database: 'facecolda' //optional
   },
 
