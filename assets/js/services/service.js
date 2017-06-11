@@ -1,6 +1,6 @@
-fasecoldaApp.service('FasecoldaService', function($http, $q){
-	return {
-		'getAutoFasecolda' : function(option){
+fasecoldaApp.factory('FasecoldaService', ['$q', '$http', function ($q, $http) {
+    return {
+          'getAutoFasecolda' : function(option){
 			var defer = $q.defer();
 			$http.post('/fasecolda/findby',option).then(function(resp){
 				console.log("Service resp",resp)
@@ -10,5 +10,5 @@ fasecoldaApp.service('FasecoldaService', function($http, $q){
 			});
 			return defer.promise;
 		}
-	}
-})
+    };
+}]);
