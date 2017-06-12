@@ -56,14 +56,14 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  mongoMicroserviceDB: {
-    adapter: 'sails-mongo',
-    host: '40.84.151.80',
-    port: 27017,
-    user: 'facecolda', //optional
-    password: 'colombia1224', //optional
-    database: 'facecolda' //optional
-  },
+  //mongoMicroserviceDB: {
+  //  adapter: 'sails-mongo',
+  //  host: '40.84.151.80',
+  //  port: 27017,
+  //  user: 'facecolda', //optional
+  //  password: 'colombia1224', //optional
+  //  database: 'facecolda' //optional
+  //},
 
   /***************************************************************************
   *                                                                          *
