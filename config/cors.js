@@ -47,7 +47,7 @@ module.exports.cors = {
   *                                                                          *
   ***************************************************************************/
 
-   origin: 'app.softseguros.com,http://pruebas.softseguros.com',
+   origin: 'https://app.softseguros.com,http://pruebas.softseguros.com,http://localhost:8000',
 
   /***************************************************************************
   *                                                                          *
