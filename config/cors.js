@@ -47,7 +47,7 @@ module.exports.cors = {
   *                                                                          *
   ***************************************************************************/
 
-   origin: 'https://app.softseguros.com,http://pruebas.softseguros.com,http://localhost:8000',
+   origin: 'https://app.softseguros.com,http://pruebas.softseguros.com,http://localhost:8000,http://sis.segurosagenciauto.com',
 
   /***************************************************************************
   *                                                                          *
