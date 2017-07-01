@@ -43,14 +43,14 @@ module.exports = {
 							"capacidad_carga": esteAuto.CapacidadCarga,
 							"ejes_vehiculo": esteAuto.Ejes,
 							"estado_vehiculo": esteAuto.Estado
-						}
+						};
 						arrToSend.push(objAuto);
 					}
 				    Fasecolda.create(arrToSend).exec(function (err, respData){
-					  if (err) { return res.serverError(err); }
+						if (err) { return res.serverError(err); }
 
-					  sails.log(respData.id);
-					  return res.json({
+						sails.log(respData.id);
+						return res.json({
 							message : files.length + ' archivo subido correctamente',
 							files: files,
 							data : respData
@@ -61,7 +61,7 @@ module.exports = {
 				//read from file
 				fs.createReadStream(files[0].fd).pipe(csvConverter);
 			}
-		})
+		});
 	},
 	findby: function(req, res){
 		var objRequest = req.body;
@@ -71,7 +71,7 @@ module.exports = {
 			    { cod_fasecolda: {'like' : "%"+objRequest.option+"%"} },
 			    { referencia_vehiculo: {'like' : "%"+objRequest.option+"%"} }
 			],
-			limit : objRequest.limit
+			limit : objRequest.limit || 10
 		}).exec(function (err, objReq){
 		  if (err) {
 		    return res.serverError(err);

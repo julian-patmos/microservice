@@ -65,6 +65,15 @@ module.exports.connections = {
     database: 'facecolda' //optional
   },
 
+  /*mongoMicroserviceDB: {
+    adapter: 'sails-mongo',
+    host: '127.0.0.1',
+    port: 27017,
+    user: '', //optional
+    password: '', //optional
+    database: 'microservice' //optional
+  },*/
+
   /***************************************************************************
   *                                                                          *
   * PostgreSQL is another officially supported relational database.          *
