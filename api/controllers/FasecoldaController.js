@@ -11,6 +11,8 @@ module.exports = {
 			if(err)
 				return res.serverError(err);
 			else{
+				Fasecolda.destroy();
+
 				//Converter Class
 				var Converter = require("csvtojson").Converter;
 
@@ -49,11 +51,10 @@ module.exports = {
 				    Fasecolda.create(arrToSend).exec(function (err, respData){
 						if (err) { return res.serverError(err); }
 
-						sails.log(respData.id);
 						return res.json({
 							message : files.length + ' archivo subido correctamente',
 							files: files,
-							data : respData
+							num_registros : respData.length
 						});
 					});
 				});
@@ -71,7 +72,7 @@ module.exports = {
 			    { cod_fasecolda: {'like' : "%"+objRequest.option+"%"} },
 			    { referencia_vehiculo: {'like' : "%"+objRequest.option+"%"} }
 			],
-			limit : objRequest.limit || 10
+			limit : objRequest.limit || 20
 		}).exec(function (err, objReq){
 		  if (err) {
 		    return res.serverError(err);

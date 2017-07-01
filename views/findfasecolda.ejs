@@ -16,9 +16,10 @@
 			</div>
 		</div>
 		<div class="row">
+			<h3>Total de encontrados <small>{{autos.length}}</small></h3>
 			<div  class="col-md-12" ng-repeat="auto in autos">
 				<blockquote>
-					<h3>{{ auto.marca_vehiculo + " " + auto.referencia_vehiculo}}</h3>
+					<h3>{{ auto.referencia_vehiculo }}</h3>
 					<p>Codigo Fasecolda : {{ auto.cod_fasecolda }}</p>
 					<p>Cilindrada : {{ auto.cilindrada }}</p>
 					<p>pasajeros : {{auto.capacidad_pasajeros}}</p>
